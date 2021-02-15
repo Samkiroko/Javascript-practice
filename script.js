@@ -47,32 +47,53 @@
 
 /*Function calling Other functions*/
 
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
 
-function fruitProcessor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
-  const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
-  return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+//   const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
 
-const calAge = function (birthYear) {
-  return 2020 - birthYear;
-};
+// const calAge = function (birthYear) {
+//   return 2020 - birthYear;
+// };
 
-const yearUntilRetirement = function (birthYear, firstName) {
-  const age = calAge(birthYear);
-  const retirement = 65 - age;
-  if (retirement > 0) {
-    return `${firstName} retires in ${retirement} years`;
+// const yearUntilRetirement = function (birthYear, firstName) {
+//   const age = calAge(birthYear);
+//   const retirement = 65 - age;
+//   if (retirement > 0) {
+//     return `${firstName} retires in ${retirement} years`;
+//   } else {
+//     return `${firstName} you are already retired`;
+//   }
+// };
+
+// console.log(yearUntilRetirement(1989, 'Samuel'));
+// console.log(yearUntilRetirement(1889, 'Sam'));
+
+/*Coding Challenge one*/
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+// test data
+const averDolphin = calcAverage(85, 54, 41);
+console.log(averDolphin);
+const averKoalas = calcAverage(23, 34, 27);
+console.log(averKoalas);
+
+function checkWinner(averDolphin, averKoalas) {
+  if (averDolphin >= 2 * averKoalas) {
+    return `Dolphins win 🏆 ${averDolphin} vs ${averKoalas}`;
+  } else if (averKoalas >= 2 * averDolphin) {
+    return `Koalas win 🏆 ${averKoalas} vs ${averDolphin}`;
   } else {
-    return `${firstName} you are already retired`;
+    return 'No one wins 🤔';
   }
-};
+}
 
-console.log(yearUntilRetirement(1989, 'Samuel'));
-console.log(yearUntilRetirement(1889, 'Sam'));
+console.log(checkWinner(averDolphin, averKoalas));
