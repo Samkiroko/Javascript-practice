@@ -18,15 +18,29 @@
 // alert(appleJuice2);
 
 /* Function declaration VS Expressions */
-function calAge1(birthYear) {
-  return 2037 - birthYear;
-}
-const age1 = calAge1(1989);
+// function calAge1(birthYear) {
+//   return 2037 - birthYear;
+// }
+// const age1 = calAge1(1989);
 
-/* Expression  */
+// /* Expression  */
 
-const calAge2 = function (birthYear) {
-  return 2037 - birthYear;
+// const calAge2 = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+// const age2 = calAge2(1993);
+// console.log(age1, age2);
+
+/* Arrow functions*/
+const calAge3 = (birthYear) => 2020 - birthYear;
+const age3 = calAge3(1989);
+console.log(age3);
+
+// year till retirement
+const yearUntilRetirement = (birthYear, firstName) => {
+  const age = 2020 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName} retires in ${retirement} years`;
 };
-const age2 = calAge2(1993);
-console.log(age1, age2);
+console.log(yearUntilRetirement(1985, 'Joyce'));
