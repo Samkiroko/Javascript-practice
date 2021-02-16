@@ -197,39 +197,98 @@ GOOD LUCK*/
 // console.log(samKiroko);
 
 /*Dot vs. Bracket Notion*/
-const samKiroko = {
-  firstName: 'Samuel',
-  lastName: 'Kiroko N',
-  age: 2020 - 1989,
-  job: 'software Developer',
-  friends: ['Milla', 'Joyce', 'Myles'],
+// const samKiroko = {
+//   firstName: 'Samuel',
+//   lastName: 'Kiroko N',
+//   age: 2020 - 1989,
+//   job: 'software Developer',
+//   friends: ['Milla', 'Joyce', 'Myles'],
+// };
+
+// console.log(samKiroko.lastName);
+// console.log(samKiroko['lastName']);
+
+// const nameKey = 'Name';
+// console.log(samKiroko['first' + nameKey]);
+// console.log(samKiroko['last' + nameKey]);
+
+// // test cases on bracket Notation
+// const interestedIn = prompt(
+//   'What do you want to know about Sam? Choose between firstName, LastName, age, job, and friends '
+// );
+
+// if (samKiroko[interestedIn]) {
+//   console.log(samKiroko[interestedIn]);
+// } else {
+//   console.log(
+//     'Wrong request! Choose between firstName, LastName, age, job, and friends '
+//   );
+// }
+// // adding values in a object
+
+// samKiroko.location = 'Thindigua';
+// samKiroko['twitter'] = '@samkiroko';
+// console.log(samKiroko);
+
+// console.log(
+//   `${samKiroko.firstName} has ${samKiroko.friends.length}friends and his best friend is called ${samKiroko.friends[0]}`
+// );
+
+/*Object Methods*/
+// const samKiroko = {
+//   firstName: 'Samuel',
+//   lastName: 'Kiroko N',
+//   birthYear: 1989,
+//   job: 'software Developer',
+//   friends: ['Milla', 'Joyce', 'Myles'],
+//   hasDriversLicense: true,
+//   // calcAge: function () {
+//   //   return 2040 - this.birthYear;
+//   // },
+//   calcAge: function () {
+//     samKiroko.age = 2037 - samKiroko.birthYear;
+//     return samKiroko.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge} -year old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's licence`;
+//   },
+// };
+// console.log(samKiroko.getSummary());
+
+/*Challenge 3 */
+
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
 };
 
-console.log(samKiroko.lastName);
-console.log(samKiroko['lastName']);
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
 
-const nameKey = 'Name';
-console.log(samKiroko['first' + nameKey]);
-console.log(samKiroko['last' + nameKey]);
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
 
-// test cases on bracket Notation
-const interestedIn = prompt(
-  'What do you want to know about Sam? Choose between firstName, LastName, age, job, and friends '
-);
-
-if (samKiroko[interestedIn]) {
-  console.log(samKiroko[interestedIn]);
-} else {
+// "John's BMI (28.3) is higher than Mark's (23.9)!"
+if (john.bmi > mark.bmi) {
   console.log(
-    'Wrong request! Choose between firstName, LastName, age, job, and friends '
+    `${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}`
+  );
+} else if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI ${mark.bmi} is higher than ${john.fullName}'s ${john.bmi}`
   );
 }
-// adding values in a object
-
-samKiroko.location = 'Thindigua';
-samKiroko['twitter'] = '@samkiroko';
-console.log(samKiroko);
-
-console.log(
-  `${samKiroko.firstName} has ${samKiroko.friends.length}friends and his best friend is called ${samKiroko.friends[0]}`
-);
