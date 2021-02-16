@@ -187,6 +187,16 @@ GOOD LUCK*/
 // console.log(total);
 
 /* Introduction to objects*/
+// const samKiroko = {
+//   firstName: 'Samuel',
+//   lastName: 'Kiroko N',
+//   age: 2020 - 1989,
+//   job: 'software Developer',
+//   friends: ['Milla', 'Joyce', 'Myles'],
+// };
+// console.log(samKiroko);
+
+/*Dot vs. Bracket Notion*/
 const samKiroko = {
   firstName: 'Samuel',
   lastName: 'Kiroko N',
@@ -194,4 +204,32 @@ const samKiroko = {
   job: 'software Developer',
   friends: ['Milla', 'Joyce', 'Myles'],
 };
+
+console.log(samKiroko.lastName);
+console.log(samKiroko['lastName']);
+
+const nameKey = 'Name';
+console.log(samKiroko['first' + nameKey]);
+console.log(samKiroko['last' + nameKey]);
+
+// test cases on bracket Notation
+const interestedIn = prompt(
+  'What do you want to know about Sam? Choose between firstName, LastName, age, job, and friends '
+);
+
+if (samKiroko[interestedIn]) {
+  console.log(samKiroko[interestedIn]);
+} else {
+  console.log(
+    'Wrong request! Choose between firstName, LastName, age, job, and friends '
+  );
+}
+// adding values in a object
+
+samKiroko.location = 'Thindigua';
+samKiroko['twitter'] = '@samkiroko';
 console.log(samKiroko);
+
+console.log(
+  `${samKiroko.firstName} has ${samKiroko.friends.length}friends and his best friend is called ${samKiroko.friends[0]}`
+);
