@@ -123,17 +123,34 @@ GOOD LUCK*/
 // console.log(checkWinner(averDolphin, averKoalas));
 
 /* Introduction to arrays */
-const friend1 = 'Michael';
-const friend2 = 'Milla';
-const friend3 = 'Mic';
-const friend4 = 'Mich';
+// const friend1 = 'Michael';
+// const friend2 = 'Milla';
+// const friend3 = 'Mic';
+// const friend4 = 'Mich';
+
+// const friends = ['Michael', 'Milla', 'Mic', 'Mich'];
+// console.log(friends);
+
+// const years = new Array(2020, 2000, 1889, 1845);
+// console.log(years);
+// console.log(years[0]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
 
 const friends = ['Michael', 'Milla', 'Mic', 'Mich'];
+// add elements
+friends.push('Jay');
+console.log(friends);
+friends.unshift('john');
 console.log(friends);
 
-const years = new Array(2020, 2000, 1889, 1845);
-console.log(years);
-console.log(years[0]);
+// remove elements
+friends.pop();
+console.log(friends);
 
-console.log(friends.length);
-console.log(friends[friends.length - 1]);
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Milla'));
+console.log(friends.includes('Milla'));
