@@ -175,13 +175,23 @@ GOOD LUCK*/
 
 // step 1 create a function that calculate bill tips
 
-const calTips = (bill) => (50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
+// const calTips = (bill) => (50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
 
-// step 2 test data in the array
-const bill = [275, 40, 430];
-const tips = [calTips(bill[0]), calTips(bill[1]), calTips(bill[2])];
-// step 3 console bill with relevant tip
-console.log(bill, tips);
-// step 4 total bills plus tip
-const total = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
-console.log(total);
+// // step 2 test data in the array
+// const bill = [275, 40, 430];
+// const tips = [calTips(bill[0]), calTips(bill[1]), calTips(bill[2])];
+// // step 3 console bill with relevant tip
+// console.log(bill, tips);
+// // step 4 total bills plus tip
+// const total = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+// console.log(total);
+
+/* Introduction to objects*/
+const samKiroko = {
+  firstName: 'Samuel',
+  lastName: 'Kiroko N',
+  age: 2020 - 1989,
+  job: 'software Developer',
+  friends: ['Milla', 'Joyce', 'Myles'],
+};
+console.log(samKiroko);
