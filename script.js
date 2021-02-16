@@ -138,12 +138,12 @@ GOOD LUCK*/
 // console.log(friends.length);
 // console.log(friends[friends.length - 1]);
 
-const friends = ['Michael', 'Milla', 'Mic', 'Mich'];
-// add elements
-friends.push('Jay');
-console.log(friends);
-friends.unshift('john');
-console.log(friends);
+// const friends = ['Michael', 'Milla', 'Mic', 'Mich'];
+// // add elements
+// friends.push('Jay');
+// console.log(friends);
+// friends.unshift('john');
+// console.log(friends);
 
 // remove elements
 // friends.pop();
@@ -269,26 +269,95 @@ const mark = {
   },
 };
 
-const john = {
-  fullName: 'John Smith',
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-console.log(mark.calcBMI());
-console.log(john.calcBMI());
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
 
-// "John's BMI (28.3) is higher than Mark's (23.9)!"
-if (john.bmi > mark.bmi) {
-  console.log(
-    `${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}`
-  );
-} else if (mark.bmi > john.bmi) {
-  console.log(
-    `${mark.fullName}'s BMI ${mark.bmi} is higher than ${john.fullName}'s ${john.bmi}`
-  );
+// // "John's BMI (28.3) is higher than Mark's (23.9)!"
+// if (john.bmi > mark.bmi) {
+//   console.log(
+//     `${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}`
+//   );
+// } else if (mark.bmi > john.bmi) {
+//   console.log(
+//     `${mark.fullName}'s BMI ${mark.bmi} is higher than ${john.fullName}'s ${john.bmi}`
+//   );
+// }
+
+/*Iteration: The for loop */
+
+// for (let rep = 1; rep <= 20; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+// /*Looping Backwards and loops in loops */
+// const samsArray = [
+//   'Sam',
+//   'Kiroko',
+//   2020 - 1989,
+//   'Software Developer',
+//   ['Michael', 'Peter', 'Steven'],
+//   true,
+// ];
+// const types = [];
+
+// for (let i = 0; i < samsArray.length; i++) {
+//   // Reading from sams Array
+//   console.log(samsArray[i]);
+//   // filling types array
+//   types[i] = typeof samsArray[i];
+// }
+
+// console.log(types);
+
+// const years = [1993, 1989, 2016, 2019];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2040 - years[i]);
+// }
+
+// console.log(ages);
+
+// /* continue and break */
+// console.log('----ONLY STRINGS---');
+// for (let i = 0; i < samsArray.length; i++) {
+//   if (typeof samsArray[i] !== 'string') continue;
+//   console.log(samsArray[i], typeof samsArray[i]);
+// }
+// console.log('----BREAK WITH NUMBER---');
+// for (let i = 0; i < samsArray.length; i++) {
+//   if (typeof samsArray[i] === 'number') break;
+//   console.log(samsArray[i], typeof samsArray[i]);
+// }
+
+const samsArray = [
+  'Sam',
+  'Kiroko',
+  2020 - 1989,
+  'Software Developer',
+  ['Michael', 'Peter', 'Steven'],
+  true,
+];
+// reverse loop
+for (let i = samsArray.length - 1; i >= 0; i--) {
+  console.log(samsArray[i], i);
+}
+
+// loop inside loops
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏾‍♀️`);
+  }
 }
