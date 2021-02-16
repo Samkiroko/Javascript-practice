@@ -146,11 +146,42 @@ friends.unshift('john');
 console.log(friends);
 
 // remove elements
-friends.pop();
-console.log(friends);
+// friends.pop();
+// console.log(friends);
 
-friends.shift();
-console.log(friends);
+// friends.shift();
+// console.log(friends);
 
-console.log(friends.indexOf('Milla'));
-console.log(friends.includes('Milla'));
+// console.log(friends.indexOf('Milla'));
+// console.log(friends.includes('Milla'));
+
+/*Steven wants to build a very simple tip calculator for whenever he goes eating in a 
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
+300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for 
+this. It's not allowed to use an if/else statement  (If it's easier for you, you can 
+start with an if/else statement, and then try to convert it to a ternary 
+operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value 
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
+316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430
+Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+§ Value X is between 50 and 300, if it's >= 50 && <= 300 
+GOOD LUCK*/
+
+// step 1 create a function that calculate bill tips
+
+const calTips = (bill) => (50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
+
+// step 2 test data in the array
+const bill = [275, 40, 430];
+const tips = [calTips(bill[0]), calTips(bill[1]), calTips(bill[2])];
+// step 3 console bill with relevant tip
+console.log(bill, tips);
+// step 4 total bills plus tip
+const total = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+console.log(total);
