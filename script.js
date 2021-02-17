@@ -340,24 +340,42 @@ const mark = {
 //   console.log(samsArray[i], typeof samsArray[i]);
 // }
 
-const samsArray = [
-  'Sam',
-  'Kiroko',
-  2020 - 1989,
-  'Software Developer',
-  ['Michael', 'Peter', 'Steven'],
-  true,
-];
-// reverse loop
-for (let i = samsArray.length - 1; i >= 0; i--) {
-  console.log(samsArray[i], i);
-}
+// const samsArray = [
+//   'Sam',
+//   'Kiroko',
+//   2020 - 1989,
+//   'Software Developer',
+//   ['Michael', 'Peter', 'Steven'],
+//   true,
+// ];
+// // reverse loop
+// for (let i = samsArray.length - 1; i >= 0; i--) {
+//   console.log(samsArray[i], i);
+// }
 
-// loop inside loops
+// // loop inside loops
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`---starting exercise ${exercise}`);
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏾‍♀️`);
-  }
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`---starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏾‍♀️`);
+//   }
+// }
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`While:Lifting weights repetition ${rep}`);
+//   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6 + 1);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end ...');
 }
